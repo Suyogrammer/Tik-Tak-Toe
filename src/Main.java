@@ -25,6 +25,11 @@ public class Main {
         }
     }
 
+    /**
+     * Checks if the board is full or not
+     * @param board : an array of strings
+     * @return true or false
+     */
     private static boolean isBoardFull(String[] board) {
         for (int i=0; i<board.length; i++){
             if (board[i] == " "){
