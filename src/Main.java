@@ -23,9 +23,14 @@ public class Main {
                 printBoard(board, visitedPlacesInBoard);
                 Scanner scanner = new Scanner(System.in);
                 int input = scanner.nextInt();
-                if (isValidMove(visitedPlacesInBoard, input)){
-                    playerPosition(board, input, visitedPlacesInBoard);
-                    computerPosition(board, visitedPlacesInBoard);
+                while (input<0 || input>8){
+                    System.out.println("Enter a valid number(0-8)");
+                    input = scanner.nextInt();
+                }
+                    if (isValidMove(visitedPlacesInBoard, input)) {
+                        playerPosition(board, input, visitedPlacesInBoard);
+                        computerPosition(board, visitedPlacesInBoard);
+
                 }
             }
         }
@@ -120,7 +125,7 @@ public class Main {
      * @return
      */
     public static boolean isValidMove(String[] visitedPlacesInBoard, int number){
-            if (visitedPlacesInBoard[number] == "V"){
+            if (visitedPlacesInBoard[number] == "V" ){
                 System.out.println("Invalid move");
                 System.out.println("Please select a place not X or O ");
                 return false;
