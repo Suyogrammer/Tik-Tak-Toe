@@ -14,9 +14,9 @@ public class Main {
         printBoard(board, visitedPlacesInBoard);
         while ((isBoardFull(board))){
             if (isWinner(board)) {
-                System.out.println("You Won");
+                System.out.println("GAME OVER");
                 printBoard(board, visitedPlacesInBoard);
-                System.out.println("Congratulations!!!!!");
+                System.out.println("Thanks for playing");
                 return;
             } else {
                 System.out.println("ELSE");
